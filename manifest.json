@@ -1,0 +1,12 @@
+{
+  "name" : "Stop procrastination",
+  "version" : "1",
+  "description" : "This plugin will block facebook after a certain amount of time, you will get 1 second of facebook time each 10 seconds that it's closed.",
+  "permissions": [ "http://*/*", "https://*/*" ],
+  "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
+  "content_scripts": [{
+      "matches": ["http://www.facebook.com/*","https://www.facebook.com/*","http://*.facebook.com/*","https://*.facebook.com/*"],
+      "js": ["jquery.js","main.js"],
+      "run_at": "document_end"
+    }]
+}
